@@ -1,0 +1,16 @@
+docker-compose --env-file ./config/.env.dev up -d
+
+Перед каждым запуском желательно удалять папки pgdata и pgadmin, чтобы все создавалось заново (особенно
+если меняете скрипт init.sql)
+
+pgadmin connection
+Адрес подключения: localhost:5050
+Пароль при входе: pgadmin
+Добавляем новый сервер:
+  1. На вкладке General вводим любое имя
+  2. На вкладке Connection:
+     Host = postgres
+     Port = 5432
+     Maintenance database = testdb
+     Username = pguser
+     Password = pgpwd
