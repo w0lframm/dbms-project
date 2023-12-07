@@ -16,3 +16,13 @@ pgadmin connection
      Password = pgpwd
 
 docker kill $(docker ps -q)
+
+in VSCode
+127.0.0.1 (localhost)
+pguser
+pgpwd
+5432
+testdb
+fubar
+
+docker exec -it postgres psql -U pguser -W testdb
